@@ -48,10 +48,10 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_
 ```
 | Parametre | Özellikler |
 | ------ | ------ |
-| *thread | Oluşturulan iş parçacığının id'sini almak için kullanılır. |
-| *attr | Oluşturulan iş parçacığının özniteliklerini belirtmek için kullanılır. Default olarak NULL şeklinde belirtilir. Böylece varsayılan öznitelikler kullanılır. |
-| *start_rutine | Çalıştırılacak olan işlev verilir. void* türünden parametre alır |
-| *arg | Çalıştırılacak işleve verilecek parametredir. |
+| `*thread` | Oluşturulan iş parçacığının id'sini almak için kullanılır. |
+| `*attr` | Oluşturulan iş parçacığının özniteliklerini belirtmek için kullanılır. Default olarak NULL şeklinde belirtilir. Böylece varsayılan öznitelikler kullanılır. |
+| `*start_rutine` | Çalıştırılacak olan işlev verilir. void* türünden parametre alır |
+| `*arg` | Çalıştırılacak işleve verilecek parametredir. |
 
 - Örnek olarak parametre göndermek için:
 
@@ -88,8 +88,8 @@ int pthread_join(pthread_t thread, void **retval);
 ```
 | Parametre | Özellikler |
 | ------ | ------ |
-| *thread | Oluşturulan iş parçacığının id'sini almak için kullanılır. |
-| **retval | İş parçacığı tamamlandığında döndürülen değerin saklanacağı adres. İş parçacığı bir değer döndürmese bile bu parametre NULL olarak geçilebilir. |
+| `*thread` | Oluşturulan iş parçacığının id'sini almak için kullanılır. |
+| `**retval` | İş parçacığı tamamlandığında döndürülen değerin saklanacağı adres. İş parçacığı bir değer döndürmese bile bu parametre NULL olarak geçilebilir. |
 
 # Mutex
 
@@ -136,8 +136,8 @@ int pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr);
 ```
 | Parametre | Özellikler |
 | ------ | ------ |
-| *mutex | İnit edilecek mutex nesnesi |
-| *attr | Mutexin özelliklerini belirler. Default olarak NULL'dır. Varsayılan özellikleri kullanır. |
+| `*mutex` | İnit edilecek mutex nesnesi |
+| `*attr` | Mutexin özelliklerini belirler. Default olarak NULL'dır. Varsayılan özellikleri kullanır. |
 
 ## pthread_mutex_lock() Fonksiyonu
 
@@ -149,7 +149,7 @@ int pthread_mutex_lock(pthread_mutex_t *mutex);
 ```
 | Parametre | Özellikler |
 | ------ | ------ |
-| *mutex | Kilitlenecek mutex. |
+| `*mutex` | Kilitlenecek mutex. |
 
 ## pthread_mutex_unlock Fonksiyonu
 
@@ -161,7 +161,7 @@ int pthread_mutex_unlock(pthread_mutex_t *mutex);
 ```
 | Parametre | Özellikler |
 | ------ | ------ |
-| *mutex | Kilidi kaldırılacak mutex. |
+| `*mutex` | Kilidi kaldırılacak mutex. |
 
 # Ekstralar
 
@@ -192,5 +192,5 @@ int gettimeofday(struct timeval *tv, struct timezone *tz);
 ```
 | Parametre | Özellikler |
 | ------ | ------ |
-| *tv | Sistem saatini tutan yapı. |
-| *tz | Obsolet (artık kullanılmayan) bir parametredir ve genellikle NULL olarak atanır.|
+| `*tv` | Sistem saatini tutan yapı. |
+| `*tz` | Obsolet (artık kullanılmayan) bir parametredir ve genellikle NULL olarak atanır.|
