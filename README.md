@@ -88,3 +88,5 @@ int	main(void)
 	return (0);
 }
 ```
+- Bu örnekte ilk thread çalışmaya başlayınca mutex'i kilitleyip x değerini bir arttırır. Mutex kilitli olduğu müddetçe diğer işlemler kilit açılana kadar bekler. En son kilit açılır ve işlemler devam eder.
+- Daha iyi anlamak isteyenler printf'i ilk thread'in çalıştığı fonkisyonun altına alıp (pthread_join) mutex unlock fonksiyonunu silip test edebilir. Program kapanmayıp kilit açılana kadar bekleyecektir.
