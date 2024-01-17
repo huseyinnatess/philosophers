@@ -30,6 +30,8 @@ int	main(void)
 
 ## pthread_create Fonksiyonu
 
+Thread oluşturur.
+
 Protoip:
 ```sh
 int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
@@ -42,6 +44,8 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_
 | *arg | Çalıştırılacak işleve verilecek parametredir. |
 
 ## pthread_join Fonskiyonu
+
+Oluşturulan thread tamamlanana kadar ilgili fonksiyonu bekletir.
 
 Protoip:
 ```sh
