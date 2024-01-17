@@ -22,7 +22,7 @@ int	main(void)
 	return (0);
 }
 ```
-##pthread_create Fonksiyonu
+## pthread_create Fonksiyonu
 
 ```sh
 Protoip:
