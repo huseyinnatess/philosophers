@@ -56,4 +56,35 @@ int pthread_join(pthread_t thread, void **retval);
 | *thread | Oluşturulan iş parçacığının id'sini almak için kullanılır. |
 | **retval | İş parçacığı tamamlandığında döndürülen değerin saklanacağı adres. İş parçacığı bir değer döndürmese bile bu parametre NULL olarak geçilebilir. |
 
+# Mutex
 
+- Bir işlem tarafından kullanılan kaynakların diğer işlemler tarafından aynı anda kullanılmaını engeller böylece çakışmalara engel olur.
+
+```sh
+#include <pthread.h>
+#include <stdio.h>
+
+int x = 0; // Global bir değişken.
+pthread_mutex_t mutex; // Mutex nesnesi.
+
+void	*my_ThreadFun(void *vargp)
+{
+    pthread_mutex_lock(&mutex); // Mutex'i kilitliyoruz.
+    x++; // Kritik nokta. X değerini arttırıyoruz.
+    pthread_mutex_unlock(&mutex); // Mutex kilidini açıyoruz.
+    return (NULL);
+}
+
+int	main(void)
+{
+    pthread_t thread_id1, thread_id2; // İki adet thread tanımlıyoruz.
+    pthread_mutex_init(&mutex, NULL); // Mutex'i başlatıyoruz.
+    pthread_create(&thread_id1, NULL, my_ThreadFun, NULL); // İlk thread'i oluşturuyoruz.
+    pthread_create(&thread_id2, NULL, my_ThreadFun, NULL); // İkinci thread'i oluşturuyoruz.
+    pthread_join(thread_id1, NULL); // Threadlerin bitmesini bekleme.
+    pthread_join(thread_id2, NULL); // Threadlerin bitmesini bekleme.
+    pthread_mutex_destroy(&mutex);
+    printf("x değeri: %d\n", x);
+	return (0);
+}
+```
