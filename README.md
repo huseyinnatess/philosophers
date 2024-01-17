@@ -1,5 +1,8 @@
 # Notlar
 
+# Thread (İş parçacığı)
+
+- Thread bir işlemi birden fazla parçaya ayırıp bu parçaları aynı anda çalıştırmak için kullanılır. Böylece işlem daha hızlı gerçekleşir.
 - Bu örnek kodda pthread_create fonksiyonu ile bir thread (yardımcı iş parçacığı) oluşturulur.
 
 ```sh
