@@ -35,3 +35,14 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_
 | *attr | Oluşturulan iş parçacığının özniteliklerini belirtmek için kullanılır. Default olarak NULL şeklinde belirtilir. Böylece varsayılan öznitelikler kullanılır. |
 | *start_rutine | Çalıştırılacak olan işlev verilir. void* türünden parametre alır |
 | *arg | Çalıştırılacak işleve verilecek parametredir. |
+
+## pthread_join Fonskiyonu
+
+```sh
+Protoip:
+int pthread_join(pthread_t thread, void **retval);
+```
+| Parametre | Özellikler |
+| ------ | ------ |
+| *thread | Oluşturulan iş parçacığının id'sini almak için kullanılır. |
+| **retval | İş parçacığı tamamlandığında döndürülen değerin saklanacağı adres. İş parçacığı bir değer döndürmese bile bu parametre NULL olarak geçilebilir. |
