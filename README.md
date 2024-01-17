@@ -1,5 +1,6 @@
 # Notlar
 
+```sh
 #include <pthread.h>
 #include <stdio.h>
 
@@ -18,6 +19,7 @@ int	main(void)
 	printf("Ana işlem bitti.\n");
 	return (0);
 }
+```
 - Bu örnek kodda pthread_create fonksiyonu ile bir thread (yardımcı iş parçacığı) oluşturulur.
 
 Fonksiyonun tanımlanması:
