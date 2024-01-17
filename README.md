@@ -1,5 +1,7 @@
 # Notlar
 
+- Bu örnek kodda pthread_create fonksiyonu ile bir thread (yardımcı iş parçacığı) oluşturulur.
+
 ```sh
 #include <pthread.h>
 #include <stdio.h>
@@ -20,10 +22,9 @@ int	main(void)
 	return (0);
 }
 ```
-- Bu örnek kodda pthread_create fonksiyonu ile bir thread (yardımcı iş parçacığı) oluşturulur.
 ```sh
 Fonksiyonun Protoipi:
-- int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
+int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
 ```
 
 | Parametre | Özellikler |
