@@ -116,7 +116,7 @@ int	main(void)
 - Bu örnekte ilk thread çalışmaya başlayınca mutex'i kilitleyip x değerini bir arttırır. Mutex kilitli olduğu müddetçe diğer işlemler kilit açılana kadar bekler. En son kilit açılır ve işlemler devam eder.
 - Daha iyi anlamak isteyenler printf'i ilk thread'in çalıştığı fonkisyonun altına alıp (pthread_join) mutex unlock fonksiyonunu silip test edebilir. Program kapanmayıp kilit açılana kadar bekleyecektir.
 
-## pthread_mutex_init Fonksiyonu
+## pthread_mutex_init() Fonksiyonu
 
 - Mutex nesnesini başlatır.
 
@@ -129,7 +129,7 @@ int pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr);
 | *mutex | İnit edilecek mutex nesnesi |
 | *attr | Mutexin özelliklerini belirler. Default olarak NULL'dır. Varsayılan özellikleri kullanır. |
 
-## pthread_mutex_lock Fonksiyonu
+## pthread_mutex_lock() Fonksiyonu
 
 - Mutex'i kilitler.
 
@@ -153,3 +153,14 @@ int pthread_mutex_unlock(pthread_mutex_t *mutex);
 | ------ | ------ |
 | *mutex | Kilidi kaldırılacak mutex. |
 
+## gettimeofday() Fonksiyonu
+
+- UNIX benzeri işletim sistemlerinde sistem saatini döndürür. Bu fonksiyon genellikle zaman ölçümü ve zaman damgası (timestamp) oluşturma gibi uygulamalarda kullanılır.
+
+Prototip:
+```sh
+#include <sys/time.h>
+
+int gettimeofday(struct timeval *tv, struct timezone *tz);
+
+```
