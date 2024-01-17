@@ -25,7 +25,10 @@ int	main(void)
 Fonksiyonun Protoipi:
 - int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
 ```
-- *thread: İlk parametre oluşturulan iş parçacığının id'sini almak için kullanılır.
-- attr: Oluşturulan iş parçacığının özniteliklerini belirtmek için kullanılır. Default olarak NULL şeklinde belirtilir. Böylece varsayılan öznitelikler kullanılır.
-- *start_rutine: Çalıştırılacak olan işlev verilir. void* türünden parametre alır.
-- arg: Çalıştırılacak işleve verilecek parametredir.
+
+| Parametre | Özellikler |
+| ------ | ------ |
+| *thread | [Oluşturulan iş parçacığının id'sini almak için kullanılır.][PlDb] |
+| *attr | [Oluşturulan iş parçacığının özniteliklerini belirtmek için kullanılır. Default olarak NULL şeklinde belirtilir. Böylece varsayılan öznitelikler kullanılır.][PlGh] |
+| *start_rutine | [Çalıştırılacak olan işlev verilir. void* türünden parametre alır.] |
+| *arg | [Çalıştırılacak işleve verilecek parametredir.] |
