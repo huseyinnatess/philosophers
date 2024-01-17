@@ -153,6 +153,8 @@ int pthread_mutex_unlock(pthread_mutex_t *mutex);
 | ------ | ------ |
 | *mutex | Kilidi kaldırılacak mutex. |
 
+# Ekstralar
+
 ## gettimeofday() Fonksiyonu
 
 - UNIX benzeri işletim sistemlerinde sistem saatini döndürür. Bu fonksiyon genellikle zaman ölçümü ve zaman damgası (timestamp) oluşturma gibi uygulamalarda kullanılır.
