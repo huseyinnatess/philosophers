@@ -6,6 +6,7 @@
 #include <pthread.h>
 #include <stdio.h>
 
+// Oluşturulan Thread Fonksiyonu (İş parçacığı).
 void	*my_ThreadFun(void *vargp)
 {
 	printf("Bu bir thread örneğidir.\n");
@@ -16,8 +17,8 @@ int	main(void)
 {
 	pthread_t thread_id;
 	printf("Ana işlem başlıyor.\n");
-	pthread_create(&thread_id, NULL, my_ThreadFun, NULL);
-	pthread_join(thread_id, NULL);
+	pthread_create(&thread_id, NULL, my_ThreadFun, NULL); // Thread Oluşturma.
+	pthread_join(thread_id, NULL); // Thread'in tamamlanmasını bekleme.
 	printf("Ana işlem bitti.\n");
 	return (0);
 }
@@ -28,7 +29,6 @@ Protoip:
 ```sh
 int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
 ```
-\n
 | Parametre | Özellikler |
 | ------ | ------ |
 | *thread | Oluşturulan iş parçacığının id'sini almak için kullanılır. |
@@ -46,3 +46,5 @@ int pthread_join(pthread_t thread, void **retval);
 | ------ | ------ |
 | *thread | Oluşturulan iş parçacığının id'sini almak için kullanılır. |
 | **retval | İş parçacığı tamamlandığında döndürülen değerin saklanacağı adres. İş parçacığı bir değer döndürmese bile bu parametre NULL olarak geçilebilir. |
+
+
