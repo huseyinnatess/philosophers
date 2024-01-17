@@ -24,11 +24,11 @@ int	main(void)
 ```
 ## pthread_create Fonksiyonu
 
-```sh
 Protoip:
+```sh
 int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
 ```
-
+\n
 | Parametre | Özellikler |
 | ------ | ------ |
 | *thread | Oluşturulan iş parçacığının id'sini almak için kullanılır. |
@@ -38,8 +38,8 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_
 
 ## pthread_join Fonskiyonu
 
-```sh
 Protoip:
+```sh
 int pthread_join(pthread_t thread, void **retval);
 ```
 | Parametre | Özellikler |
