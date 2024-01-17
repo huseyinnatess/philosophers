@@ -43,6 +43,31 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_
 | *start_rutine | Çalıştırılacak olan işlev verilir. void* türünden parametre alır |
 | *arg | Çalıştırılacak işleve verilecek parametredir. |
 
+- Örnek olarak parametre göndermek için:
+
+```sh
+#include <pthread.h>
+#include <stdio.h>
+
+void	*my_ThreadFun(void *str)
+{    
+    char *str2;
+    
+    str2 = str;
+    printf("%s\n", str2);
+    return (NULL);
+}
+
+int	main(void)
+{
+    pthread_t thread_id1; // İki adet thread tanımlıyoruz.
+    pthread_create(&thread_id1, NULL, my_ThreadFun, "Merhaba"); // İlk thread'i oluşturuyoruz.
+    pthread_join(thread_id1, NULL); // Threadlerin bitmesini bekleme.
+	return (0);
+}
+```
+- Parametreli kullanım bu şekildedir.
+
 ## pthread_join Fonskiyonu
 
 Oluşturulan thread tamamlanana kadar ilgili fonksiyonu bekletir.
