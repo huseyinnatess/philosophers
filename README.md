@@ -28,7 +28,7 @@ int	main(void)
 ```
 ## Kullanılan Hazır Fonksiyonlar
 
-## pthread_create Fonksiyonu
+# pthread_create Fonksiyonu
 
 Protoip:
 ```sh
