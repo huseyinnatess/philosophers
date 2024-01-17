@@ -159,6 +159,20 @@ int pthread_mutex_unlock(pthread_mutex_t *mutex);
 
 - UNIX benzeri işletim sistemlerinde sistem saatini döndürür. Bu fonksiyon genellikle zaman ölçümü ve zaman damgası (timestamp) oluşturma gibi uygulamalarda kullanılır.
 
+```sh
+#include <stdio.h>
+#include <sys/time.h>
+
+int main()
+{
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    printf("Sistem saati: %ld s %d us\n", tv.tv_sec, tv.tv_usec);
+    return (0);
+}
+```
+Bu kodda sistem saati alınmış ve tv yapısına aktarılmıştır. Daha sonra saniye ve mikrosaniye'ye çevrilerek ekrana yazdırılmıştır.
+
 Prototip:
 ```sh
 #include <sys/time.h>
@@ -166,3 +180,8 @@ Prototip:
 int gettimeofday(struct timeval *tv, struct timezone *tz);
 
 ```
+| Parametre | Özellikler |
+| ------ | ------ |
+| *tv | Sistem saatini tutan yapı. |
+| *tz | Obsolet (artık kullanılmayan) bir parametredir ve genellikle NULL olarak atanır.|
+
