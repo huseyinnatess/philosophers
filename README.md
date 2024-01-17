@@ -30,7 +30,7 @@ int	main(void)
 
 ## pthread_create Fonksiyonu
 
-Thread oluşturur.
+Thread oluşturmak için kullanılır.
 
 Protoip:
 ```sh
