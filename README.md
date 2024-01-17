@@ -21,10 +21,10 @@ int	main(void)
 }
 ```
 - Bu örnek kodda pthread_create fonksiyonu ile bir thread (yardımcı iş parçacığı) oluşturulur.
-
-Fonksiyonun tanımlanması:
+```sh
+Fonksiyonun Protoipi:
 - int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
-
+```
 - *thread: İlk parametre oluşturulan iş parçacığının id'sini almak için kullanılır.
 - attr: Oluşturulan iş parçacığının özniteliklerini belirtmek için kullanılır. Default olarak NULL şeklinde belirtilir. Böylece varsayılan öznitelikler kullanılır.
 - *start_rutine: Çalıştırılacak olan işlev verilir. void* türünden parametre alır.
