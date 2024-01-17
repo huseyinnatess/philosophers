@@ -185,3 +185,15 @@ int gettimeofday(struct timeval *tv, struct timezone *tz);
 | *tv | Sistem saatini tutan yapı. |
 | *tz | Obsolet (artık kullanılmayan) bir parametredir ve genellikle NULL olarak atanır.|
 
+# Kullanılan Argümanlar
+
+## Kullanıcı Girişi
+
+| Parametre                                           | Açıklama                                                                                      |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `number_of_philosophers`                           | Filozof sayısı ve aynı zamanda çatal sayısı.                                                  |
+| `time_to_die` (milisaniye cinsinden)               | Eğer bir filozof, son yemeğinin veya simulasyonun başlangıcından bu yana geçen `time_to_die` milisaniye içinde yemek yeme işlemine başlamazsa, açlıktan ölür. |
+| `time_to_eat` (milisaniye cinsinden)               | Bir filozofun yemek yemesi için geçen süre. Bu süre içinde iki çatalı tutması gerekir.         |
+| `time_to_sleep` (milisaniye cinsinden)             | Bir filozofun uyuma süresi.                                                                   |
+| `number_of_times_each_philosopher_must_eat` (opsiyonel) | Eğer tüm filozoflar en az `number_of_times_each_philosopher_must_eat` kez yemişse, simulasyon durur. Belirtilmemişse, simulasyon bir filozofun ölümüyle sona erer. |
+
