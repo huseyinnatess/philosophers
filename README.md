@@ -29,6 +29,6 @@ Fonksiyonun Protoipi:
 | Parametre | Özellikler |
 | ------ | ------ |
 | *thread | Oluşturulan iş parçacığının id'sini almak için kullanılır. |
-| *attr | [Oluşturulan iş parçacığının özniteliklerini belirtmek için kullanılır. Default olarak NULL şeklinde belirtilir. Böylece varsayılan öznitelikler kullanılır.][PlGh] |
-| *start_rutine | [Çalıştırılacak olan işlev verilir. void* türünden parametre alır.] |
-| *arg | [Çalıştırılacak işleve verilecek parametredir.] |
+| *attr | Oluşturulan iş parçacığının özniteliklerini belirtmek için kullanılır. Default olarak NULL şeklinde belirtilir. Böylece varsayılan öznitelikler kullanılır. |
+| *start_rutine | Çalıştırılacak olan işlev verilir. void* türünden parametre alır |
+| *arg | Çalıştırılacak işleve verilecek parametredir. |
