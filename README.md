@@ -90,3 +90,41 @@ int	main(void)
 ```
 - Bu örnekte ilk thread çalışmaya başlayınca mutex'i kilitleyip x değerini bir arttırır. Mutex kilitli olduğu müddetçe diğer işlemler kilit açılana kadar bekler. En son kilit açılır ve işlemler devam eder.
 - Daha iyi anlamak isteyenler printf'i ilk thread'in çalıştığı fonkisyonun altına alıp (pthread_join) mutex unlock fonksiyonunu silip test edebilir. Program kapanmayıp kilit açılana kadar bekleyecektir.
+
+## pthread_mutex_init Fonksiyonu
+
+- Mutex nesnesini başlatır.
+
+Prototip:
+```sh
+int pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr);
+```
+| Parametre | Özellikler |
+| ------ | ------ |
+| *mutex | İnit edilecek mutex nesnesi |
+| *attr | Mutexin özelliklerini belirler. Default olarak NULL'dır. Varsayılan özellikleri kullanır. |
+
+## pthread_mutex_lock Fonksiyonu
+
+- Mutex'i kilitler.
+
+Prototip:
+```sh
+int pthread_mutex_lock(pthread_mutex_t *mutex);
+```
+| Parametre | Özellikler |
+| ------ | ------ |
+| *mutex | Kilitlenecek mutex. |
+
+## pthread_mutex_unlock Fonksiyonu
+
+- Mutex'in kilidini açar
+
+Prototip:
+```sh
+int pthread_mutex_unlock(pthread_mutex_t *mutex);
+```
+| Parametre | Özellikler |
+| ------ | ------ |
+| *mutex | Kilidi kaldırılacak mutex. |
+
