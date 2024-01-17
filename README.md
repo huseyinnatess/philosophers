@@ -26,9 +26,9 @@ int	main(void)
 	return (0);
 }
 ```
-## Kullanılan Hazır Fonksiyonlar
+# Kullanılan Hazır Fonksiyonlar
 
-# pthread_create Fonksiyonu
+## pthread_create Fonksiyonu
 
 Protoip:
 ```sh
