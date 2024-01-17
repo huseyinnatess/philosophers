@@ -22,8 +22,10 @@ int	main(void)
 	return (0);
 }
 ```
+##pthread_create Fonksiyonu
+
 ```sh
-Fonksiyonun Protoipi:
+Protoip:
 int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
 ```
 
