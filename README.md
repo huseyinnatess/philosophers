@@ -93,7 +93,7 @@ int pthread_join(pthread_t thread, void **retval);
 
 # Mutex
 
-- Bir işlem tarafından kullanılan kaynakların diğer işlemler tarafından aynı anda kullanılmaını engeller böylece çakışmalara engel olur.
+- Bir işlem tarafından kullanılan kaynakların diğer işlemler tarafından aynı anda kullanılmasını engeller böylece çakışmalara engel olur.
 
 ```sh
 #include <pthread.h>
