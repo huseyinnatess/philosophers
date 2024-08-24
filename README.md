@@ -1,4 +1,5 @@
-# Notlar
+# Philosophers Projesi
+Bu proje, klasik "Dining Philosophers" (Yemek Yiyen Filozoflar) problemini çözmek için geliştirilmiştir. Proje, çoklu iş parçacığı kullanımı ve senkronizasyon konularını ele alır. Filozoflar aynı anda yemek yemeye çalışır, bu süreçte çatal paylaşımı yapılır ve bu paylaşım semaforlar veya mutexler ile senkronize edilir.
 
 ### Kullanılan Argümanlar
 
